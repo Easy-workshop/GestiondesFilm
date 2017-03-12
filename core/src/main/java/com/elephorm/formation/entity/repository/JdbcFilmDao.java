@@ -22,11 +22,16 @@ import java.util.List;
 
 
 public class JdbcFilmDao  implements  FilmDaoInterface{
-      
+    private String   driverClassName;
+
+    public void setDriverClassName(String driverClassName) {
+        this.driverClassName = driverClassName;
+    }
+    
          public void save(Film film){
           Connection con =null;
       try{
-      //Class.forName("com.mysql.jdbc.Drivers").newInstance();
+      Class.forName(driverClassName).newInstance();
       con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
       
       System.out.println("CONNEXION OK");
