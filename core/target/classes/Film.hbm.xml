@@ -14,7 +14,7 @@
         <property name="genre" column="MOVIE_TYPE"/>
         
     
-    <many-to-one name ="acteurPrincipal" column ="MAIN_ACTOR_ID" lazy="false"/>
+    <many-to-one name ="acteurPrincipal" column ="MAIN_ACTOR_ID" cascade="all"/>
     
     <set name ="acteurSecondaires" table ="MOVIE_SEC_ACTOR">
         <key column ="ID_MOVIE"/>

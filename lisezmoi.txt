@@ -1,7 +1,1 @@
-*
-
-
-<set name ="acteurSecondaires" table ="MOVIE_SEC_ACTOR">
-        <key column ="ID_MOVIE"/>
-        <many-to-many class="com.elephorm.formation.entity.Acteur" column="ID_ACTOR"/>
-    </set>
+*film enregistré :ok

@@ -8,20 +8,38 @@ import java.util.Scanner;
 public class DefaultFilmController {
     
     public void registerFilmFromConsoleInput (){
+    
     Scanner sc=new Scanner(System.in);
-    System.out.println("titre=");
+    System.out.println("titre film =");
     String titre= sc.nextLine();
-    System.out.println("genre=");
+    
+    System.out.println("genre film =");
     String genre= sc.nextLine();
-    System.out.println("nbexemplaire=");
-    int nb= sc.nextInt();
-
+    
+    System.out.println("quel est le nom d l'acteur princiapel =");
+    String nom = sc.nextLine();
+    
+    System.out.println("quel est prénon d  =");
+    String prenom = sc.nextLine();
+    
+    
+    
 
 
 Film film=new Film();
 film.setTitre(titre);
 film.setGenre(genre);
-film.setNbExemplaire(nb);
+//film.setNbExemplaire(nb);
+
+
+Acteur acteur =new Acteur();
+acteur.setNom(nom);
+acteur.setPrenom(prenom);
+
+film.setActeurPrincipal(acteur);
+
+
+       
 
 FilmService service = new FilmService();
 service.registerFilm(film);
