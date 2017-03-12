@@ -1,7 +1,0 @@
-CREATE TABLE ACTOR
-(
-ID INT not null AUTO_INCREMENT,
-NOM varchar(255),
-PRENOM varchar(255),
-PRIMARY KEY (ID)
-); 

@@ -30,4 +30,18 @@ service.registerFilm(film);
 
     }
     
+public void descrireFilmwithCconsole()
+{
+
+ Scanner sc=new Scanner(System.in);
+    System.out.println("donner ID=");
+   int id = sc.nextInt();
+    
+    FilmService service =new FilmService();
+    Film film =service.getFilmDescription(id);
+    System.out.println("le film est "+film.getTitre()+"--"+film.getGenre());
+
 }
+}
+
+

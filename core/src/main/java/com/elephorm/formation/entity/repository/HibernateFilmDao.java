@@ -51,4 +51,45 @@ public class HibernateFilmDao {
     
     } 
     
-}
+
+ public Film getbyid(int  id){
+   
+    Session session =HibernateUtil.getSessionFactory().openSession();
+    Film film =null;
+    
+    try{
+    session.beginTransaction();
+    film=(Film)session.get(Film.class, id);
+    session.getTransaction().commit();
+    }catch(HibernateException he){
+        he.printStackTrace();
+        if (session.getTransaction()!=null){
+        try{
+        
+        session.getTransaction().rollback();
+        }catch (HibernateException he2){
+        he2.printStackTrace();
+        }
+        }
+    
+    
+    }  finally{
+        if (session!=null){
+        
+        try{
+        
+        session.close();
+        }catch (Exception e ){
+        e.printStackTrace();
+        }
+        }
+        }
+    return film;
+
+    
+    } 
+   
+
+
+
+}// fin class HibernateFilmDao

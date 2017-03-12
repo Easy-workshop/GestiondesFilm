@@ -26,5 +26,9 @@ public class FilmService {
   dao.save(film);
 
 }
-    
+ 
+    public Film getFilmDescription(int id){
+    HibernateFilmDao dao =new  HibernateFilmDao();
+    return dao.getbyid(id);
+    }
 }
