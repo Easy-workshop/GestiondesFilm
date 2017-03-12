@@ -2,9 +2,18 @@ package com.elephorm.formation.entity;
 
 
 public class Film {
+    private Integer id;
     private String titre;
     private String genre;
     private Integer nbExemplaire;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getTitre() {
         return titre;
@@ -29,5 +38,6 @@ public class Film {
     public void setNbExemplaire(Integer nbExemplaire) {
         this.nbExemplaire = nbExemplaire;
     }
-    
+
+   
 }
