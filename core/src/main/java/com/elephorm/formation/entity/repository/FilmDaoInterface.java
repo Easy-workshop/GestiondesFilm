@@ -6,7 +6,7 @@ import java.util.List;
 
 
 public interface FilmDaoInterface {
-    public void save(Film film);
+public void save(Film film);
 public Film getbyid(int  id);
             
 public List<Film> list();
