@@ -15,12 +15,13 @@ import java.sql.PreparedStatement;
 
 
 import java.sql.SQLException;
+import java.util.List;
 
 
 
 
 
-public class JdbcFilmDao {
+public class JdbcFilmDao  implements  FilmDaoInterface{
       
          public void save(Film film){
           Connection con =null;
@@ -51,6 +52,16 @@ con.close();
 
 }
      }  
+
+    @Override
+    public Film getbyid(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Film> list() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
 

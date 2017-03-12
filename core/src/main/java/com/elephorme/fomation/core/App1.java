@@ -2,6 +2,8 @@ package com.elephorme.fomation.core;
 
 //import com.elephorm.formation.entity.Film;
 import com.elephorm.formation.entity.controller.DefaultFilmController;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 //import com.elephorm.formation.entity.service.FilmService;
 
 public class App1 {
@@ -20,9 +22,13 @@ public  static void main(String[] args)
     service.registerFilm(film);
     
     */
-    DefaultFilmController contoller = new DefaultFilmController();
-    contoller.registerFilmFromConsoleInput();
-}
+   // DefaultFilmController contoller = new DefaultFilmController();
+   // contoller.registerFilmFromConsoleInput();
+    
+ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+     DefaultFilmController controller=(DefaultFilmController)context.getBean("FilmController");
+     controller.registerFilmFromConsoleInput();
+} 
 
     
 }

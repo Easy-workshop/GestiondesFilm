@@ -4,9 +4,10 @@ package com.elephorm.formation.entity.repository;
 import com.elephorm.formation.entity.Film;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 
 
-public class FileFilmDao {
+public class FileFilmDao implements  FilmDaoInterface {
    public void save(Film film){
    
      FileWriter writer;
@@ -18,6 +19,16 @@ public class FileFilmDao {
     e.printStackTrace();
     }
    
+    }
+
+    @Override
+    public Film getbyid(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Film> list() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
