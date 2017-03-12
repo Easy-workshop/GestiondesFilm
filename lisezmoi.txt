@@ -1,1 +1,12 @@
-exécuter app2
+ACTOR :1
+2
+3
+
+MOVIE:10
+11
+12
+--------résultat-------donner :acteur 1-----
+10-1
+11-1
+12-1
+afficher 3 films

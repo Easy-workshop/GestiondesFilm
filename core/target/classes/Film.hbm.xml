@@ -13,6 +13,9 @@
         <property name="nbExemplaire" column="COPIES"/>
         <property name="genre" column="MOVIE_TYPE"/>
         
+    
+    <many-to-one name ="acteurPrincipal" column ="MAIN_ACTOR_ID" lazy="false"/>
+    
     </class>
 
 </hibernate-mapping>

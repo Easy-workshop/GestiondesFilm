@@ -34,12 +34,13 @@ public void descrireFilmwithCconsole()
 {
 
  Scanner sc=new Scanner(System.in);
-    System.out.println("donner ID=");
+    System.out.println("donner ID du film=");
    int id = sc.nextInt();
     
     FilmService service =new FilmService();
     Film film =service.getFilmDescription(id);
     System.out.println("le film est "+film.getTitre()+"--"+film.getGenre());
+        System.out.println("++++l'acteur "+film.getActeurPrincipal().getPrenom());
 
 }
 }

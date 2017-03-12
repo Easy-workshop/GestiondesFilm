@@ -6,7 +6,16 @@ public class Film {
     private String titre;
     private String genre;
     private Integer nbExemplaire;
+    private Acteur acteurPrincipal;
 
+    public Acteur getActeurPrincipal() {
+        return acteurPrincipal;
+    }
+
+    public void setActeurPrincipal(Acteur acteurPrincipal) {
+        this.acteurPrincipal = acteurPrincipal;
+    }
+   
     public Integer getId() {
         return id;
     }
