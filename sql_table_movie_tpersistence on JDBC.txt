@@ -1,0 +1,18 @@
+*film enregistré :ok
+
+
+******table1******
+Requête SQL : 
+CREATE TABLE MOVIE
+(
+ID int NOT NULL AUTO_INCREMENT,
+TITLE varchar(255),
+COPIES INT,
+MOVIE_TYPE varchar(255),
+MAIN_ACTOR_ID INT,
+PRIMARY KEY (ID)
+); 
+***********insertion1
+INSERT INTO MOVIE(TITLE,COPIES,MOVIE_TYPE,MAIN_ACTOR_ID) 
+VALUES("Title_movie1",20,"COMEDIE")
+***********
