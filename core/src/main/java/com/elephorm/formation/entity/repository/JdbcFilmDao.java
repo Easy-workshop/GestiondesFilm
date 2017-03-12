@@ -28,6 +28,10 @@ public class JdbcFilmDao  implements  FilmDaoInterface{
         this.driverClassName = driverClassName;
     }
     
+    public JdbcFilmDao(){
+    System.out.println("mycons1");
+    }
+    
          public void save(Film film){
           Connection con =null;
       try{
