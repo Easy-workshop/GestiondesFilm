@@ -1,18 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.elephorm.formation.entity.controller;
 
 import com.elephorm.formation.entity.Film;
 import com.elephorm.formation.entity.service.FilmService;
 import java.util.Scanner;
 
-/**
- *
- * @author HP
- */
 public class DefaultFilmController {
     
     public void registerFilmFromConsoleInput (){
