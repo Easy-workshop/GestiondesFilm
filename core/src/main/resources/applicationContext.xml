@@ -5,13 +5,16 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     
-<bean id="FilmDao" class="com.elephorm.formation.entity.repository.JdbcFilmDao">
+<!--<bean id="FilmDao" class="com.elephorm.formation.entity.repository.JdbcFilmDao">
 <constructor-arg value="com.mysql.jdbc.Driver"/>
 </bean>
+-->
+
+<bean id="FilmDao" class="com.elephorm.formation.entity.repository.HibernateFilmDao" />
 
 
-<bean id="FilmService" class="com.elephorm.formation.entity.service.FilmService">
-<constructor-arg ref="FilmDao"/>
+<bean id="FilmService" class="com.elephorm.formation.entity.service.FilmService" autowire="byType">
+<!--<constructor-arg ref="FilmDao"/>-->
 </bean>
 
 
