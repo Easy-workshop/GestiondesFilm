@@ -1,6 +1,0 @@
-exécuter app2
-
-classe film ajouter la clé étrangère= 
-Private Acteur acteurPricipal
-
-ajouter ce mapping film.hbm.xml

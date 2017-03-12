@@ -1,0 +1,8 @@
+******table3******
+Requête SQL : 
+CREATE TABLE MOVIE_SEC_ACTOR
+(
+ID_MOVIE INT,
+ID_ACTOR INT
+); 
+

@@ -1,12 +1,7 @@
-ACTOR :1
-2
-3
+*
 
-MOVIE:10
-11
-12
---------résultat-------donner :acteur 1-----
-10-1
-11-1
-12-1
-afficher 3 films
+
+<set name ="acteurSecondaires" table ="MOVIE_SEC_ACTOR">
+        <key column ="ID_MOVIE"/>
+        <many-to-many class="com.elephorm.formation.entity.Acteur" column="ID_ACTOR"/>
+    </set>

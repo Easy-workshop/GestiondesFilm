@@ -60,6 +60,9 @@ public class HibernateFilmDao {
     try{
     session.beginTransaction();
     film=(Film)session.get(Film.class, id);
+    Hibernate.initialize(film.getActeurPrincipal());
+    Hibernate.initialize(film.getActeurSecondaires());
+    
     session.getTransaction().commit();
     }catch(HibernateException he){
         he.printStackTrace();

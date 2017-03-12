@@ -1,5 +1,11 @@
 package com.elephorm.formation.entity;
 
+import java.util.Set;
+
+
+
+
+
 
 public class Film {
     private Integer id;
@@ -7,15 +13,8 @@ public class Film {
     private String genre;
     private Integer nbExemplaire;
     private Acteur acteurPrincipal;
+    private Set<Acteur> acteurSecondaires;
 
-    public Acteur getActeurPrincipal() {
-        return acteurPrincipal;
-    }
-
-    public void setActeurPrincipal(Acteur acteurPrincipal) {
-        this.acteurPrincipal = acteurPrincipal;
-    }
-   
     public Integer getId() {
         return id;
     }
@@ -46,6 +45,22 @@ public class Film {
 
     public void setNbExemplaire(Integer nbExemplaire) {
         this.nbExemplaire = nbExemplaire;
+    }
+
+    public Acteur getActeurPrincipal() {
+        return acteurPrincipal;
+    }
+
+    public void setActeurPrincipal(Acteur acteurPrincipal) {
+        this.acteurPrincipal = acteurPrincipal;
+    }
+
+    public Set<Acteur> getActeurSecondaires() {
+        return acteurSecondaires;
+    }
+
+    public void setActeurSecondaires(Set<Acteur> acteurSecondaires) {
+        this.acteurSecondaires = acteurSecondaires;
     }
 
    
