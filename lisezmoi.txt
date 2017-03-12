@@ -1,1 +1,1 @@
-affichage de : film enregistré :ok
+Donner nom du film,genre,nbexemplaire:ok
