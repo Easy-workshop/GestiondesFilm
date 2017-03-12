@@ -6,9 +6,13 @@ import com.elephorm.formation.entity.service.FilmService;
 import com.elephorm.formation.entity.service.FilmServiceInterface;
 import java.util.List;
 import java.util.Scanner;
+import javax.annotation.Resource;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class DefaultFilmController {
     
+    @Resource
     private  FilmServiceInterface service; 
 
     public FilmServiceInterface getService() {

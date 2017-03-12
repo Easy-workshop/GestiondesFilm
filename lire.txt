@@ -1,0 +1,5 @@
+cas d'utiliser plusieur dao:
+dao de type ficiher
+dao de type hibernate
+// // jdbc
+// //  memoire

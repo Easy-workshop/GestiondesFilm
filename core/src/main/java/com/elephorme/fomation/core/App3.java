@@ -11,7 +11,7 @@ public class App3 {
     
     public static void main(String[] args) {
     ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-    DefaultFilmController controller=(DefaultFilmController)context.getBean("FilmController");
+    DefaultFilmController controller=(DefaultFilmController)context.getBean("defaultFilmController");
     controller.ListFilmToConsole();
     }
     
