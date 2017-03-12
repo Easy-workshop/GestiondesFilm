@@ -1,2 +1,1 @@
-par défaut dans le fichier de spring le scope est singleton 
-si on le change par prototype il ne l'est plus 
+appelé le contructeur d'un beans ou autre pas beans...
