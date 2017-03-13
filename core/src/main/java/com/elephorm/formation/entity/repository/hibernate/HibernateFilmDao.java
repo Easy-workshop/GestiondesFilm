@@ -6,10 +6,12 @@ import com.elephorm.formation.entity.repository.FilmDaoInterface;
 
 import com.elephorme.formation.core.util.HibernateUtil;
 import java.util.List;
+import javax.annotation.Resource;
 
 import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
+import org.hibernate.SessionFactory;
 
 import org.hibernate.classic.Session;
 import org.springframework.stereotype.Repository;
@@ -19,10 +21,14 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class HibernateFilmDao  implements  FilmDaoInterface{
- @Override
+
+    @Resource
+    private SessionFactory SessionFactory;
+    
+    @Override
 public void save(Film film){
    
-    Session session =HibernateUtil.getSessionFactory().openSession();
+    Session session =SessionFactory.openSession();
     try{
     session.beginTransaction();
     session.persist(film);
@@ -58,7 +64,7 @@ public void save(Film film){
 
  public Film getbyid(int  id){
    
-    Session session =HibernateUtil.getSessionFactory().openSession();
+    Session session =SessionFactory.openSession();
     Film film =null;
     
     try{
@@ -100,7 +106,7 @@ public void save(Film film){
 
  public List<Film> list(){
    
-    Session session =HibernateUtil.getSessionFactory().openSession();
+    Session session =SessionFactory.openSession();
     List<Film> films =null;
     
     try{
